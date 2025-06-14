@@ -4,6 +4,7 @@ title: 流焰xwx
 theme: PaperMod
 
 params:
+  ShowCodeCopyButtons: true
   profileMode:
     enabled: true
     title: "流焰xwx" # optional default will be site title
@@ -13,11 +14,26 @@ params:
     #imageWidth: 120 # custom size
     #imageHeight: 120 # custom size
     buttons:
-      - name: Github
-        url: "https://github.com/"
+      - name: 网站源码
+        url: "https://github.com/LiuYan-xwx/LiuYan_Website/"
 
   socialIcons: # optional
-    - name: "<platform>"
-      url: "<link>"
-    - name: "<platform 2>"
-      url: "<link2>"
+    - name: "github"
+      url: "https://github.com/LiuYan-xwx/"
+    - name: "QQ"
+      url: "https://qm.qq.com/q/9EUzkDRSCc"
+
+menu:
+  main:
+    - identifier: home
+      name: 主页
+      url: /
+      weight: 1
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 10
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 20
