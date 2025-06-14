@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: LiuYan-xwx/LiuYan_Website
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+site_url: https://lyxwx.top
+display_url: https://lyxwx.top
+locale: 'zh_Hans'
+
+collections:
+  - name: "posts"
+    label: "文章"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "日期", name: "date", widget: "datetime" }
+      - { label: "正文", name: "body", widget: "markdown" }
