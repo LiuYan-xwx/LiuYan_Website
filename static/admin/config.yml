@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  base_url: https://api.netlify.com
+  name: github
+  repo: LiuYan-xwx/LiuYan_Website
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
