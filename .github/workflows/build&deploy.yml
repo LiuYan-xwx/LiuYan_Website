@@ -1,0 +1,48 @@
+name: Build and Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_CACHEDIR: /tmp/hugo_cache
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0
+
+      - name: 设置 Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+  
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.HUGO_CACHEDIR }} # <- Use the same env variable just right here
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: 构建网站
+        run: hugo --minify
+
+      - name: 安装 rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
+      - name: 部署到服务器
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+          rsync -avz --delete -e "ssh -p ${{ secrets.SERVER_PORT }}" public/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.SITE_DIRECTORY }}
