@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: LiuYan-xwx/LiuYan_Website
+  base_url: https://lyxwx.top
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
