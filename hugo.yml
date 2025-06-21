@@ -16,6 +16,8 @@ params:
     buttons:
       - name: 网站源码
         url: "https://github.com/LiuYan-xwx/LiuYan_Website/"
+      - name: 站点状态
+        url: "https://status.lyxwx.top"
 
   socialIcons: # optional
     - name: "github"
