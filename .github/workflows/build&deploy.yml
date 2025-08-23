@@ -34,8 +34,8 @@ jobs:
       - name: 构建网站
         run: hugo --minify
 
-      - name: 安装 rsync
-        run: sudo apt-get update && sudo apt-get install -y rsync
+#      - name: 安装 rsync
+#        run: sudo apt-get update && sudo apt-get install -y rsync
 
       - name: 部署到服务器
         env:
