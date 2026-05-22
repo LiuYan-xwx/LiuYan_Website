@@ -36,9 +36,9 @@ params:
       url: "https://github.com/LiuYan-xwx/"
     - name: "QQ"
       url: "https://qm.qq.com/q/9EUzkDRSCc"
-  analytics:
-    google:
-      SiteVerificationTag: "G-PZT94GZEYS"
+  services:
+    googleAnalytics:
+      id: "G-PZT94GZEYS"
 
 menu:
   main:
