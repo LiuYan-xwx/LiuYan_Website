@@ -3,6 +3,10 @@ paginate: 5
 title: 流焰xwx
 theme: PaperMod
 
+services:
+    googleAnalytics:
+      id: "G-PZT94GZEYS"
+
 params:
   ShowReadingTime: true
   ShowPostNavLinks: true
@@ -36,10 +40,6 @@ params:
       url: "https://github.com/LiuYan-xwx/"
     - name: "QQ"
       url: "https://qm.qq.com/q/9EUzkDRSCc"
-  services:
-    googleAnalytics:
-      id: "G-PZT94GZEYS"
-
 menu:
   main:
     - identifier: home
