@@ -1,10 +1,24 @@
 baseURL: https://lyxwx.top/
-languageCode: zh-CN
+paginate: 5
 title: 流焰xwx
 theme: PaperMod
 
 params:
-  ShowCodeCopyButtons: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
   profileMode:
     enabled: true
     title: "流焰xwx" # optional default will be site title
