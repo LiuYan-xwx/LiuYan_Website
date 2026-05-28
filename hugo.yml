@@ -25,7 +25,7 @@ params:
     enabled: true
     title: "流焰xwx" # optional default will be site title
     subtitle: "很高兴认识你"
-    imageUrl: "static/images/uploads/1774935489926.png" # optional
+    imageUrl: "images/uploads/1774935489926.png" # optional
     #imageTitle: "<title of image as alt>" # optional
     imageWidth: 120 # custom size
     imageHeight: 120 # custom size
