@@ -26,7 +26,7 @@ params:
     title: "流焰xwx" # optional default will be site title
     subtitle: "很高兴认识你"
     imageUrl: "images/uploads/1774935489926.png" # optional
-    #imageTitle: "<title of image as alt>" # optional
+    imageTitle: "avatar" # optional
     imageWidth: 120 # custom size
     imageHeight: 120 # custom size
     buttons:
@@ -40,6 +40,8 @@ params:
       url: "https://github.com/LiuYan-xwx/"
     - name: "QQ"
       url: "https://qm.qq.com/q/9EUzkDRSCc"
+    - name: "x"
+      url: "https://x.com/LiuYan_xwx"
 menu:
   main:
     - identifier: home
