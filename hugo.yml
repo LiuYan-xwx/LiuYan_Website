@@ -12,7 +12,6 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
-  ShowWordCount: true
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
