@@ -33,7 +33,12 @@ params:
         url: "https://github.com/LiuYan-xwx/LiuYan_Website/"
       - name: 站点状态
         url: "https://status.lyxwx.top"
-
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/images/favicon/favicon.svg"
+    apple_touch_icon: "/images/favicon/apple-touch-icon.png"
+    safari_pinned_tab: "/images/favicon/apple-touch-icon.png"
   socialIcons: # optional
     - name: "github"
       url: "https://github.com/LiuYan-xwx/"
@@ -41,6 +46,8 @@ params:
       url: "https://qm.qq.com/q/9EUzkDRSCc"
     - name: "x"
       url: "https://x.com/LiuYan_xwx"
+
+
 menu:
   main:
     - identifier: home
